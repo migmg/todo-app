@@ -20,11 +20,12 @@
             <button><img src="/imagens/x-icon.png" alt="icone x para excluir uma tarefa"></button>
         </form>
         </div>
+        {{#each tarefas}}
         <div class="tarefa">
             <form action="">
             <div>
-                <input type="radio" id="tarefa-1">
-            <label for="tarefa-1">Completar curso javascript</label>
+                <input type="checkbox" id="tarefa-{{this.id}}">
+            <label for="tarefa-{{this.id}}">{{this.descricao}}</label>
             </div>
 
             <button><img src="/imagens/x-icon.png" alt="icone x para excluir uma tarefa"></button>
